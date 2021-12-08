@@ -804,7 +804,7 @@ The `AppBar` of this scaffold also has two actions which are the top-right dropd
 
 > How does StatsBloc know to update? Updates are triggered by the stream, not by any UI event. See a discussion of [event flow](#commentary-event-flow).
 
-> How will the the Stats UI know to update? It gets a state change notification via the `onData` in `emit.forEach()`. When state changes, the `BlocBuilder<StatsBloc>` in [stats_page.dart](#stats-view) knows to rebuild. See a discussion of [event flow](#commentary-event-flow).
+> How will the Stats UI know to update? It gets a state change notification via the `onData` in `emit.forEach()`. When state changes, the `BlocBuilder<StatsBloc>` in [stats_page.dart](#stats-view) knows to rebuild. See a discussion of [event flow](#commentary-event-flow).
 
 
 [stats_bloc.dart.md](_snippets/flutter_todos_tutorial/lib/stats_bloc.dart.md ':include') [//]: # (HCTOKEN)
@@ -882,7 +882,7 @@ Notice how it does not directly get any information from the `List<Todos>` which
 
 #### Commentary - Event Flow
 
-> How will the the Stats UI and the main list of Todos UI know to update? Where in the code does it tell the other screens to redraw? <br>
+> How will the  Stats UI and the main list of Todos UI know to update? Where in the code does it tell the other screens to redraw? <br>
 ANSWER: The other parts of the UI gets a state change notification because of their subscription to `TodosRepository`.  There is no direct bloc-to-bloc communication. EditTodosBloc has zero logic about what needs to be done elsewhere. Everything goes through the repository.
 
 This is best explained with the help of a widget tree diagram:
