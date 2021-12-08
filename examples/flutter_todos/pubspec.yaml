@@ -21,6 +21,10 @@ dependencies:
     path: packages/todos_api
   todos_repository:
     path: packages/todos_repository
+  flutter_bloc_devtools:
+    git:
+      url: https://github.com/chonghorizons/flutter_bloc_devtools.git
+      ref: 3e38a8c
 
 dev_dependencies:
   bloc_test: ^9.0.1
