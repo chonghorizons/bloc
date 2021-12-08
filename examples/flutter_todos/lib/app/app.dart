@@ -25,6 +25,8 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner:
+          false, // otherwise, one of the appBar actions is covered.
       theme: FlutterTodosTheme.lightTheme,
       darkTheme: FlutterTodosTheme.darkTheme,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
